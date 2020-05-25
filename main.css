@@ -23,8 +23,8 @@ body {
     font-family: "Montserrat", sans-serif;
     background: #000;
     color: #a1a1a1;
-    line-height: 1.5;
-    margin: 0;
+    line-height: 1.6;
+    margin: auto
 }
 
 .main-header {
@@ -78,7 +78,7 @@ body {
 .main-nav__item > a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
+    font-weight: 400;
     padding: 0.2rem 0;
 }
 
@@ -158,6 +158,8 @@ body {
 
 #about, #resume, #services, #skills, #contact {
     padding-top: 8rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .about-background {
@@ -272,6 +274,7 @@ body {
     letter-spacing: 3px;
     text-transform: uppercase;
     position: relative;
+    margin-bottom: 3rem;
 }
 
 .service-title::after {
@@ -345,4 +348,102 @@ body {
     font-size: 1rem;
     padding: 2rem 1rem;
     text-align: center;
+}
+
+/** Tablets Screens */
+@media (min-width: 641px) {
+    .home-background {
+        background-position-y: 60%;
+    }
+
+    .home-content__subtitle {
+        font-size: 1rem;
+    }
+
+    .home-content__title {
+        font-size: 3.1rem;
+    }
+    
+    .about-background {
+        background: url("assets/images/about_section.jpg") center/cover no-repeat border-box;
+        height: 100vh;
+        max-height: 520px;
+        width: 40%;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+
+    .about-content {
+        width: 59%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .heading {
+        font-size: 3.1rem;
+    }
+
+    .list {
+        padding: 0 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .block-2 {
+        margin-bottom: 4%;
+        flex: 0 0 46%;
+        max-width: 50%;
+    }
+
+    .block-3 {
+        margin: 0;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+
+/** Laptops and Large Screens */
+@media (min-width: 769px) {
+    .toggle-menu {
+        display: none;
+    }
+
+    .main-nav {
+        display: flex;
+        flex: 0 1 auto;
+    }
+
+    .main-nav__items {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+
+    .main-nav__item {
+        padding: 0.7rem 1.5rem;
+    }
+
+    .home-content {
+        top: 40%;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .home-content__subtitle {
+        font-size: 1.4rem;
+    }
+
+    .home-content__title {
+        font-size: 4.1rem;
+    }
+
+    .home-content__description {
+        font-size: 2.6rem;
+        font-weight: 400;
+    }
+
+    .contact {
+        flex-basis: auto;
+    }
+
 }
