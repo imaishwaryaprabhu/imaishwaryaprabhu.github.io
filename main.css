@@ -21,9 +21,10 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     background: #000;
     color: #a1a1a1;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: auto
 }
 
@@ -109,7 +110,16 @@ body {
     display: block !important;
 }
 
+section {
+    padding-top: 8rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
 #home {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
     width: 100%;
     height: calc(100vh - 64px);
     position: relative;
@@ -126,7 +136,7 @@ body {
 
 .home-content {
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     padding: 1rem;
     text-align: center;
     width: 100%;
@@ -156,12 +166,6 @@ body {
     font-weight: 400;
 }
 
-#about, #resume, #services, #skills, #contact {
-    padding-top: 8rem;
-    max-width: 1200px;
-    margin: auto;
-}
-
 .about-background {
     display: none;
 }
@@ -176,6 +180,12 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 4rem;
+}
+
+.about-content__description {
+    margin: 0;
+    padding: 0.5rem 2rem;
+    line-height: 1.8em;
 }
 
 .points {
@@ -232,7 +242,8 @@ body {
 .resume-date {
     color: #ffbd39;
     font-weight: 900;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 .resume-title {
@@ -246,6 +257,11 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.resume-description {
+    margin: 1.2rem 0;
+    line-height: 1.8rem;
 }
 
 .service {
@@ -306,18 +322,17 @@ body {
     width: 100%;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.3);
+    position: relative;
 }
 
 .progress-bar {
-    width: 80%;
     height: 0.7rem;
     border-radius: 4px;
     background: #ffbd39;
     position: relative;
 }
 
-.progress-bar::after {
-    content: "80%";
+.progress-bar span {
     position: absolute;
     top: -38px;
     right: -45px;
@@ -341,7 +356,8 @@ body {
 }
 
 .main-footer {
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
@@ -424,20 +440,18 @@ body {
     }
 
     .home-content {
-        top: 35%;
+        bottom: 15%;
         padding: 1rem;
         text-align: left;
     }
 
     .home-content__title {
         font-size: 4rem;
-        margin: 1rem 0;
     }
 
     .home-content__description {
         font-size: 2.5rem;
         font-weight: 400;
-        margin: 0;     
     }
 
     .contact {
